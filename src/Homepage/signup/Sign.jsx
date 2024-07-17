@@ -33,7 +33,7 @@
       
          
           <Formik
-            initialValues={{ name: '', email: '', password: '', confirmPassword: '', cart:[] }}
+            initialValues={{ name: '', email: '', password: '', confirmPassword: '', cart:[] ,order:[]}}
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting }) => {
               console.log(values);
@@ -145,6 +145,7 @@
                   Login
                 </button>
                 </Link>
+                
               </form>
             )}
           </Formik>

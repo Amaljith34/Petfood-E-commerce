@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect, useContext } from 'react';
 import { ShopContext } from '../../App';
-const Dog = () => {
+const Petselect= () => {
   const [datas, setDatas] = useState([]);
   const [category, setCategory] = useState('All');
   const { addtocart } = useContext(ShopContext); // Destructure addtocart from ShopContext
@@ -57,4 +57,4 @@ const Dog = () => {
   );
 };
 
-export default Dog;
+export default Petselect;

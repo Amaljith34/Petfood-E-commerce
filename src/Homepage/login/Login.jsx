@@ -38,11 +38,15 @@ import { ShopContext } from '../../App';
               .then(res=>{console.log(res.data)
                 const findata=res.data.find(item=>item.email===values.email&&item.password===values.password)
                 const findata1=res.data.find(item=>item.email===values.email&&item.password!==values.password)
-                if(findata)
+                if(findata&&values.email==='admin123@gmail.com')
                 {
                   alert('login successfulll');
                   localStorage.setItem("id",findata.id)
-                  console.log('res.data');
+                  navigate('/admin')
+                }
+                else if(findata){
+                  alert('login successfulll');
+                  localStorage.setItem("id",findata.id)
                   navigate('/')
                 }
                 else if(findata1)

@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Pets = () => {
-  const dogs = [
+  const pets = [
     {
       name: "Dogs",
       image: "https://supertails.com/cdn/shop/files/Frame_344684006-min_a45bbe7b-ea37-4e56-bce2-a1061fc094f4.png?v=1717524214",
@@ -30,9 +30,9 @@ const Pets = () => {
     <div className="container mx-auto p-4  ">
       <h1 className="text-4xl font-bold text-center mb-8 text-red-600">Pets</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pb-56 md:pb-0 ">
-        {dogs.map((dog, index) => (
+        {pets.map((dog, index) => (
           <div key={index} className="border border-gray-400 p-6 rounded-lg shadow-lg">
-            <Link to='/dog'>
+            <Link to='/Petselect'>
             <img src={dog.image} alt={dog.name} className="w-full  object-cover rounded-t-lg mb-4"/>
             </Link>
             <h2 className="text-2xl font-bold mb-2">{dog.name}</h2>

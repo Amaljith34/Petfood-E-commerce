@@ -9,7 +9,7 @@ import Pets from './assets/Animals/Pets';
 import ProductList from './Shop/Shop1/ProductList';
 import Home from './Homepage/Home/Home';
 import Baseproducts from './Products/Baseproducts'
-import Dog from './assets/Animals/Dog'
+
 
 
 
@@ -20,6 +20,19 @@ import Cart from './Shop/Shop1/Cart';
 import Basemobail from './Products/Basemobail';
 import axios from 'axios';
 import Payment from './payment/Payment';
+import Petselect from './assets/Animals/Petselect';
+import Adsminnav from './Admin/Adminhome/Adminnavbar';
+import Adminnavbar from './Admin/Adminhome/Adminnavbar';
+import Homepage from './Admin/Home/Homepage';
+import Userlist from './Admin/User/Userlist';
+import Product from './Admin/productslist/Product';
+import Userdetails from './payment/Userdetails';
+
+
+
+
+
+
 export const ShopContext = createContext()
 function App() {
   const [cart, setcart] = useState([])
@@ -84,6 +97,8 @@ function App() {
     useState(()=>{
 
     })
+
+    
       let size = cart.length
   return (
     <BrowserRouter>
@@ -99,13 +114,30 @@ function App() {
             <Route path='/list'element={<Foodcart/>}/>
             <Route path='/Baseproduct'element={<Baseproducts/>}/>
             <Route path='/Basemobail' element={<Basemobail/>}/>
-            <Route path='/dog'element={<Dog/>}/>
-            <Route path='/payment'element={<Payment/>}/>
+            <Route path='/petselect'element={<Petselect/>}/>
+            
+            
            
            </Route>
+           <Route path='/payment'element={<Payment/>}/>
+            <Route path='/userdetails'element={<Userdetails/>}/>
            <Route path='/login' element={<Login />} />
             <Route path='/sign' element={<Sign />} />
             <Route path='forgotlogin' element={<Forgotlogin />} />
+
+            <Route path='/'element={<Adminnavbar/>}>
+            <Route path='/admin'element={<Homepage/>}/>
+             <Route path='/userlist'element={<Userlist/>}/>
+             <Route path='/products'element={<Product/>}/>
+           
+            </Route>
+
+
+            
+
+
+
+
             </Routes>
     </ShopContext.Provider>
   </BrowserRouter>
