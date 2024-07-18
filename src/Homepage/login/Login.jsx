@@ -38,7 +38,7 @@ import { ShopContext } from '../../App';
               .then(res=>{console.log(res.data)
                 const findata=res.data.find(item=>item.email===values.email&&item.password===values.password)
                 const findata1=res.data.find(item=>item.email===values.email&&item.password!==values.password)
-                if(findata&&values.email==='admin123@gmail.com')
+                if(findata&&values.email==='admin123@gmail.com'&&values.password==='admin123')
                 {
                   alert('login successfulll');
                   localStorage.setItem("id",findata.id)

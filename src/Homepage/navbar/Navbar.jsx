@@ -9,7 +9,7 @@ import { ShopContext } from '../../App';
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
-  const {isLogged,setLogged}=useContext(ShopContext)
+  const {isLogged,setLogged,size}=useContext(ShopContext)
   const handleClick = () => setClick(!click);
 
   return (
@@ -26,6 +26,7 @@ const Navbar = () => {
           <div className='md:hidden'>
             <Link to='/cartpage'>
               <button className='flex flex-col md:flex-row items-center hover:text-blue-600 py-3 px-3'>
+              <span style={{display:size>0?'inline':'none'}} className='absolute text-white  h-5 w-3 bg-red-500 rounded font-bold text-sm ml-10 '>{size}</span>
                 <FaShoppingCart size='20px' />
                 <span className='ml-2'>𝗖𝗮𝗿𝘁</span>
               </button>
@@ -34,7 +35,7 @@ const Navbar = () => {
           <div className='hidden md:flex flex-1 justify-center items-center ml-36'>
             <ul className='flex gap-8 text-[18px]'>
               <Link to='/'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝐇𝐨𝐦𝐞</li></Link>
-              <Link to='/pets'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝗠𝘆 𝗣𝗲𝘁𝘀</li></Link>
+              <Link to='/pets'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝗠𝘆𝗣𝗲𝘁𝘀</li></Link>
               
               <Link to='/shop'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝗦𝗵𝗼𝗽</li></Link>
               <Link to='/Baseproduct'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝗦𝘂𝗽𝗽𝗼𝗿𝘁</li></Link>
@@ -44,6 +45,7 @@ const Navbar = () => {
               <Link to='/cartpage' >
               
                 <button className='flex flex-col items-center hover:text-blue-600 py-3 px-3'>
+                <span style={{display:size>0?'inline':'none'}} className='absolute text-white  h-5 w-3 bg-red-500 rounded font-bold text-sm ml-10 '>{size}</span>
                   <FaShoppingCart size='20px' />
                   <span className='ml-2'>Cart</span>
                 </button>
@@ -82,4 +84,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 

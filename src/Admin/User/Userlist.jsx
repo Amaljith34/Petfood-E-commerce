@@ -107,6 +107,7 @@ import Usermodal from '../Adminhome/modal/Usermodal';
 
 const Userlist = () => {
   const [list, setList] = useState([]);
+  const [usersearch, setUserSearch] = useState('');
   const [selectedUser, setSelectedUser] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -134,7 +135,27 @@ const Userlist = () => {
       .catch(error => console.log(error));
   };
   
+  const UserData = list.filter(item =>
+        item.name.toLowerCase().includes(usersearch.toLowerCase())||
+        item.id.toLowerCase().includes(usersearch.toLowerCase())||
+        item.emai.toLowerCase().includes(usersearch.toLowerCase())
+    );
+
+
+
   return (
+    <div>
+      <div className='text-black font-bold text-3xl flex justify-center p-4'><h1>User Details</h1></div>
+      <div className=' flex justify-center p-5'>
+    <input
+           type="text"
+           placeholder="Search..."
+           className="w-1/2 md: border border-gray-400 rounded-md px-4 py-2 mb-6"
+           value={usersearch}
+           onChange={(e) => setUserSearch(e.target.value)}
+         />
+    </div>
+    
     <div className="p-4 w-full overflow-x-auto">
       <table className="min-w-full bg-white border border-gray-200">
         <thead>
@@ -148,7 +169,7 @@ const Userlist = () => {
           </tr>
         </thead>
         <tbody>
-          {list.map((item) => (
+          {UserData.map((item) => (
             <tr 
               key={item.id} 
               className="border-b cursor-pointer hover:bg-gray-100 text-center border-gray-400"
@@ -157,7 +178,9 @@ const Userlist = () => {
               <td className="py-2 px-4 text-black">{item.name}</td>
               <td className="py-2 px-4 text-black">{item.email}</td>
               <td className="py-2 px-4">
-                <button className="bg-green-400 text-black p-2 rounded-lg font-bold">
+                <button className="bg-green-400 text-black p-2 rounded-lg font-bold"
+                 onClick={() => handleRowClick(item)}
+                 >
                   ViewOrder
                 </button>
               </td>
@@ -189,7 +212,10 @@ const Userlist = () => {
         />
       )}
     </div>
+    </div>
   );
 };
 
 export default Userlist;
+
+

@@ -6,18 +6,64 @@
       "email": "jith51541@gmail.com",
       "password": "1234567890",
       "confirmPassword": "1234567890",
-      "cart": [
+      "cart": [],
+      "order": [
         {
-          "id": "1",
-          "name": "Royal Canin Dog Food",
-          "category": "Dog",
-          "image": "https://m.media-amazon.com/images/I/51ZkHOvkuuL._SY450_.jpg",
-          "description": "Premium dog food with balanced nutrition for all life stages. Brand: Royal Canin. Flavour: Meat. Age Range: Adult. Form: Dry. Specific Ingredients: Chicken. Net Weight: 3 kg.",
-          "price": 1200,
-          "Qty": 1
+          "paymentaddress": {
+            "name": "Amaljith",
+            "address": "kattungal",
+            "landmark": "mathapuzha bridge",
+            "pincode": "676319",
+            "phone": "8590166397"
+          },
+          "accNumber": "1234567890",
+          "price": 16065,
+          "cart": [
+            {
+              "id": "1",
+              "name": "Royal Canin Dog Food",
+              "category": "Dog",
+              "image": "https://m.media-amazon.com/images/I/51ZkHOvkuuL._SY450_.jpg",
+              "description": "Premium dog food with balanced nutrition for all life stages. Brand: Royal Canin. Flavour: Meat. Age Range: Adult. Form: Dry. Specific Ingredients: Chicken. Net Weight: 3 kg.",
+              "price": 1200,
+              "Qty": 2
+            },
+            {
+              "id": "3",
+              "name": "Pedigree Adult Dry Dog Food, ",
+              "category": "Dog",
+              "image": "https://m.media-amazon.com/images/I/41Z6Wo7cJvL._SX300_SY300_QL70_FMwebp_.jpg",
+              "description": "Veterinarian-recommended Dog food with precise nutrition for optimal health. Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
+              "price": 4555,
+              "Qty": 3
+            }
+          ],
+          "securityCode": "987654"
+        },
+        {
+          "paymentaddress": {
+            "name": "Unknown",
+            "address": "ppppppp",
+            "landmark": "dddddd",
+            "pincode": "dddddd",
+            "phone": "ddddd"
+          },
+          "accNumber": "dddddd",
+          "price": 999,
+          "cart": [
+            {
+              "id": "12",
+              "name": "Jainsons Pet Products",
+              "category": "fish",
+              "image": "https://m.media-amazon.com/images/I/61ngF3OBp+L._AC_UL320_.jpg",
+              "description": "Veterinarian-recommended fish food with precise nutrition for optimal health. Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
+              "price": 999,
+              "Qty": 1
+            }
+          ],
+          "securityCode": "ddddd"
         }
-      ],
-      "order": []
+      ]
     },
     {
       "id": "c3f7",
@@ -48,31 +94,12 @@
       "order": []
     },
     {
-      "id": "9224",
+      "id": "c2c2",
       "name": "Admin",
       "email": "admin123@gmail.com",
       "password": "admin123",
       "confirmPassword": "admin123",
-      "cart": [
-        {
-          "id": "1",
-          "name": "Royal Canin Dog Food",
-          "category": "Dog",
-          "image": "https://m.media-amazon.com/images/I/51ZkHOvkuuL._SY450_.jpg",
-          "description": "Premium dog food with balanced nutrition for all life stages. Brand: Royal Canin. Flavour: Meat. Age Range: Adult. Form: Dry. Specific Ingredients: Chicken. Net Weight: 3 kg.",
-          "price": 1200,
-          "Qty": 1
-        },
-        {
-          "id": "7",
-          "name": "TUNAI Fish Food",
-          "category": "fish",
-          "image": "https://m.media-amazon.com/images/I/71MGQvD1d7L._SY355_.jpg",
-          "description": "Veterinarian-recommended fish food with precise nutrition for optimal health. Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
-          "price": 1666,
-          "Qty": 2
-        }
-      ],
+      "cart": [],
       "order": []
     }
   ],
@@ -83,7 +110,7 @@
       "category": "Dog",
       "image": "https://m.media-amazon.com/images/I/51ZkHOvkuuL._SY450_.jpg",
       "description": "Premium dog food with balanced nutrition for all life stages. Brand: Royal Canin. Flavour: Meat. Age Range: Adult. Form: Dry. Specific Ingredients: Chicken. Net Weight: 3 kg.",
-      "price": 1200,
+      "price": "1300",
       "Qty": 1
     },
     {
@@ -182,8 +209,15 @@
       "category": "fish",
       "image": "https://m.media-amazon.com/images/I/61ngF3OBp+L._AC_UL320_.jpg",
       "description": "Veterinarian-recommended fish food with precise nutrition for optimal health. Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
-      "price": 999,
+      "price": "1001",
       "Qty": 1
+    },
+    {
+      "id": "a591",
+      "name": "dog foood",
+      "description": "sadfdfsbg",
+      "price": "41",
+      "image": "https://m.media-amazon.com/images/I/61ngF3OBp+L._AC_UL320_.jpg"
     }
   ]
 }

@@ -1,7 +1,7 @@
 
 
 import React, { useContext, useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Navigate, Outlet, useNavigate } from 'react-router-dom';
 import { FaTimes, FaShoppingCart } from 'react-icons/fa';
 import { CiMenuBurger } from 'react-icons/ci';
 import { IoIosContact } from "react-icons/io";
@@ -11,30 +11,69 @@ const  Adminnavbar= () => {
   const [click, setClick] = useState(false);
   const {isLogged,setLogged,cart}=useContext(ShopContext)
   const handleClick = () => setClick(!click);
- 
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const navigate=useNavigate()
+
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
+
+  const handleLogout = () => {
+    localStorage.clear();
+  
+    setDropdownVisible(false);
+    navigate('/Login')
+  };
+
+  
+  
+  const userName = "Admin"; // Replace with actual user name
+  const userEmail = "admin123@gmail.com";
+  {cart.map((item, index) => (
+    console.log(item)
+  ))}
+  
 
   return (
+    
     <div className=' top-0 z-50'>
+     
       <nav className='bg-gray-400 py-4 md:py-7 '>
-        <div className='flex justify-between items-center px-4 md:ml-14 '>
+        <div className='flex justify-between items-center px-4  '>
           
-          <div className='flex items-center'>
-            <Link to='/Login' className='flex flex-col items-center  'onClick={()=>setLogged(localStorage.clear())}>
-              <IoIosContact className='text-black' size='40px' />
-              <span className='text-black ml-2'> {isLogged?'Admin':'𝗦𝗶𝗴𝗻 in'}</span>
-            </Link>
-            <h2 className='text-3xl font-bold text-green-600   ml-12  '>𝓟𝓔𝓣𝓢𝓕𝓞𝓞𝓓</h2>
-              
-          </div>
+          <div className='flex items-center '>
+        <div className='relative'>
+      <div className='flex flex-col items-center cursor-pointer' onClick={toggleDropdown}>
+        <IoIosContact className='text-black' size='40px' />
+        <span className='text-black'>Admin</span>
+      </div>
+      {dropdownVisible && (
+        <div className='absolute top-full mt-2 w-48 bg-black shadow-lg rounded-md z-10 text-white'>
+          <div className='px-4 py-2 text-sm '>{userName}</div>
+          <div className='px-4 py-2 text-sm '>{userEmail}</div>
+          <button
+            onClick={handleLogout}
+            className='w-full px-4 py-2 text-sm text-left text-red-600 '
+          >
+            Logout
+          </button>
+          
+        </div>
+      )}
+    </div> 
+      <h2 className='text-3xl font-bold text-green-600   ml-12  '>𝓟𝓔𝓣𝓢𝓕𝓞𝓞𝓓</h2>
+      </div>
+
           
           
-          <div className='hidden md:flex flex-1 justify-center items-center ml-44'>
-            <ul className='flex gap-8 text-[18px]'>
+          
+          <div className='hidden md:flex flex-1 justify-center items-center '>
+            <ul className='flex gap-8 text-[18px] ml-96'>
               <Link to='/admin'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝐇𝐨𝐦𝐞</li></Link>
               <Link to='/userlist'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝗨𝘀𝗲𝗿-𝗟𝗶𝘀𝘁</li></Link>
-              
               <Link to='/products'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝗣𝗿𝗼𝗱𝘂𝗰𝘁𝘀</li></Link>
-              <Link to='/logout'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝗟𝗼𝗴𝗼𝘂𝘁</li></Link>
+              <Link to='/Login'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'><span > 𝗟𝗼𝗴𝗼𝘂𝘁</span></li></Link>
             </ul>
             
             
@@ -65,8 +104,8 @@ const  Adminnavbar= () => {
               </Link>
             </li>
             <li>
-              <Link to="/login" className="block p-2 rounded hover:bg-gray-700" onClick={()=>setLogged(localStorage.clear())}>
-              <span > {isLogged?'Logout':'𝗦𝗶𝗴𝗻 in'}</span>
+              <Link to="/Login" className="block p-2 rounded hover:bg-gray-700" onClick={()=>setLogged(localStorage.clear())}>
+              <span > 𝗟𝗼𝗴𝗼𝘂𝘁</span>
               </Link>
             </li>
           </ul>
