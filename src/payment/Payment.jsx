@@ -161,7 +161,7 @@ const Payment = () => {
   return (
     <div className="max-w-md mx-auto mt-10 p-4 border border-gray-300 rounded-md shadow-lg">
       <Formik
-        initialValues={{paymentaddress: paymentaddress, accNumber: '', price: total,  cart:cart }}
+        initialValues={{paymentaddress: paymentaddress, accNumber: '', price: total,   cart:cart }}
         validationSchema={validationSchema}
         onSubmit={(values) => {
           console.log(values);

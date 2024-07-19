@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { ShopContext } from '../../App';
+import Footer from '../../Homepage/Footer';
 
 const Foodcart = ({ data }) => {
   const { addtocart } = useContext(ShopContext);
@@ -13,7 +14,7 @@ const Foodcart = ({ data }) => {
   return (
     <div className="container mx-auto px-4 py-8">
       
-    <div className=' flex justify-center'>
+    <div className=' flex justify-center '>
       <input
         type="text"
         placeholder="Search..."
@@ -47,6 +48,7 @@ const Foodcart = ({ data }) => {
           </div>
         ))}
       </div>
+      <Footer/>
     </div>
   );
 };

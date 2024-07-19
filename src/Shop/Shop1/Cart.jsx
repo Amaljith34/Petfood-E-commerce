@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../../App';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import Footer from '../../Homepage/Footer';
 
 function Cart() {
   const [count, setCount] = useState(1);
@@ -39,7 +40,8 @@ function Cart() {
                 <div className="p-2">
                   <div className="font-bold">{item.name}</div>
                   <div className="">{item.description}</div>
-                  <div className="text-black text-2xl font-bold">Price:
+                  <div className="font-bold">Price: {item.price}</div>
+                  <div className="text-black text-2xl font-bold">Total Price:
                     {item.price * item.Qty}
                   </div>
                 </div>
@@ -73,18 +75,19 @@ function Cart() {
         <p className="text-red-500 text-2xl text-center mt-56">Cart is Empty</p>
       )}
 
-      <div className="fixed bottom-0 left-0 right-0 p-2 flex items-center justify-center bg-white shadow-md">
+      <div className="fixed bottom-0 left-0 right-0 mb-5 p-2 flex items-center justify-center bg-black shadow-md text-white">
         <span className="mr-2 text-2xl font-bold">
           Total Price: {cart.reduce((acc, item) => acc + item.Qty * item.price, 0)}
         </span>
         <button
-          className={`bg-green-500 text-black p-2 rounded hover:bg-blue-500 hover:text-black ml-10 ${cart.length === 0 && 'opacity-50 cursor-not-allowed'}`}
+          className={`bg-green-600 text-white p-2 rounded hover:bg-blue-500 font-bold hover:text-black ml-10 ${cart.length === 0 && 'opacity-50 cursor-not-allowed'}`}
           onClick={handleBuyNow}
           disabled={cart.length === 0}
         >
           Buy Now
         </button>
       </div>
+      <Footer/>
     </>
   );
 }

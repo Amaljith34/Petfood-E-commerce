@@ -307,14 +307,14 @@ import axios from 'axios';
 
 const Productmodal = ({ isOpen, onClose, value, isEditMode, refreshProducts }) => {
   const [productData, setProductData] = useState(
-    value || { name: '', description: '', price: '', image: '' }
+    value || { name: '', description: '', price: '', image: '' ,Qty:'',category:'' }
   );
 
   useEffect(() => {
     if (value) {
       setProductData(value);
     } else {
-      setProductData({ name: '', description: '', price: '', image: '' });
+      setProductData({ name: '', description: '', price: '', image: '',Qty:'',category:'' });
     }
   }, [value]);
 
@@ -384,6 +384,28 @@ const Productmodal = ({ isOpen, onClose, value, isEditMode, refreshProducts }) =
               type="text"
               name="image"
               value={productData.image}
+              onChange={handleChange}
+              className="w-full p-2 border border-gray-300 rounded"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-2">Quantity</label>
+            <input
+              type="number"
+              name="Qty"
+              value={productData.Qty}
+              onChange={handleChange}
+              className="w-full p-2 border border-gray-300 rounded"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-2">Category</label>
+            <input
+              type="text"
+              name="category"
+              value={productData.category}
               onChange={handleChange}
               className="w-full p-2 border border-gray-300 rounded"
               required

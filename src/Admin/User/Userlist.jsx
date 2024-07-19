@@ -103,6 +103,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Usermodal from '../Adminhome/modal/Usermodal';
+import Order from '../Adminhome/Order';
 
 
 const Userlist = () => {
@@ -110,7 +111,8 @@ const Userlist = () => {
   const [usersearch, setUserSearch] = useState('');
   const [selectedUser, setSelectedUser] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
+  
   useEffect(() => {
     axios.get('http://localhost:8000/users')
       .then(res => setList(res.data))
@@ -126,6 +128,14 @@ const Userlist = () => {
     setIsModalOpen(false);
     setSelectedUser(null);
   };
+  const handleOrderClick = (user) => {
+    setSelectedUser(user);
+    setIsOrderModalOpen(true);
+  };
+  const handleCloseOrderModal = () => {
+    setIsOrderModalOpen(false);
+    setSelectedUser(null);
+};
 
   const handleDelete = (userId) => {
     axios.delete(`http://localhost:8000/users/${userId}`)
@@ -187,7 +197,7 @@ const Userlist = () => {
               <td className="py-2 px-4">
                 <button 
                   className="bg-yellow-400 p-2 rounded-lg font-bold" 
-                  onClick={() => handleRowClick(item)}
+                  onClick={() => handleOrderClick(item)}
                 >
                   ViewCart
                 </button>
@@ -205,9 +215,16 @@ const Userlist = () => {
         </tbody>
       </table>
       {selectedUser && (
-        <Usermodal 
+        <Order
           isOpen={isModalOpen} 
           onClose={handleCloseModal} 
+          user={selectedUser} 
+        />
+      )}
+      {selectedUser && (
+        <Usermodal 
+          isOpen={isOrderModalOpen} 
+          onClose={handleCloseOrderModal} 
           user={selectedUser} 
         />
       )}

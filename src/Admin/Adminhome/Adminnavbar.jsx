@@ -30,9 +30,9 @@ const  Adminnavbar= () => {
   
   const userName = "Admin"; // Replace with actual user name
   const userEmail = "admin123@gmail.com";
-  {cart.map((item, index) => (
-    console.log(item)
-  ))}
+  // {cart.map((item, index) => (
+    
+  // ))}
   
 
   return (

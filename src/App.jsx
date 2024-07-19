@@ -27,6 +27,7 @@ import Userlist from './Admin/User/Userlist';
 import Product from './Admin/productslist/Product';
 import Userdetails from './payment/Userdetails';
 import Footer from './Homepage/Footer';
+import Orderpage from './Homepage/Orderpage';
 
 
 
@@ -36,9 +37,14 @@ import Footer from './Homepage/Footer';
 export const ShopContext = createContext()
 function App() {
   const [cart, setcart] = useState([])
+  const [user,setuser]=useState([])
+  const[fetchorder,setfechorder]=useState([])
+  const [users, setUsers] = useState([]);
   const [order, setorder] = useState([])
   const [isLogged, setLogged] = useState(false)
   const [paymentaddress, setpaymentaddress] = useState([])
+  const [orderlist,setOrderlist]=useState([])
+  const [productslist, setProductslist] = useState([]);
   let id=localStorage.getItem('id')
     
 
@@ -47,6 +53,33 @@ function App() {
       setLogged(true)
     }
   },[])
+  useEffect(()=>{
+    axios.get(`http://localhost:8000/users/${id}`)
+    .then(res=>setuser(res.data))
+    
+  
+  },[])
+  
+  useEffect(() => {
+    axios
+      .get('http://localhost:8000/users')
+      .then((res) => {
+        const mapedorder = res.data.filter((item) => item.order.length > 0);
+        // console.log(mapedorder.length);
+        setOrderlist(mapedorder);
+      })
+      .catch((error) => console.log("error"));
+  }, []);
+  useEffect(() => {
+    axios
+      .get('http://localhost:8000/products')
+      .then((res) => {
+        setProductslist(res.data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+
 
   useEffect(()=>{
     axios.get(`http://localhost:8000/users/${id}`)
@@ -94,6 +127,11 @@ function App() {
         axios.patch(`http://localhost:8000/users/${id}`,{cart:remove})
 
       }
+
+
+     
+
+
 
       const Updateqty=(product,num)=>{
       if(product.Qty ===1 && num===-1)return
@@ -148,7 +186,7 @@ function App() {
       let size = cart.length
   return (
     <BrowserRouter>
-      <ShopContext.Provider value={{ cart, addtocart,removecart,size,Updateqty,setcart,setLogged,isLogged,continoue ,order,setorder,setpaymentaddress,paymentaddress}}>
+      <ShopContext.Provider value={{ cart, addtocart,removecart,size,Updateqty,setcart,setLogged,isLogged,continoue ,order,setorder,setpaymentaddress,paymentaddress,user,productslist,orderlist}}>
         
         <Routes>
           <Route path='/' element={<Navbar/>}>
@@ -162,7 +200,9 @@ function App() {
             <Route path='/Baseproduct'element={<Baseproducts/>}/>
             <Route path='/Basemobail' element={<Basemobail/>}/>
             <Route path='/petselect'element={<Petselect/>}/>
+            <Route path='/order'element={<Orderpage/>}/>
             <Route path='/footer'element={<Footer/>}></Route>
+             
             </Route>
            
            

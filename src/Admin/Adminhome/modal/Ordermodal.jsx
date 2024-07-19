@@ -17,7 +17,7 @@ const Ordermodal = ({ isOpen, onClose, user }) => {
              <button
               onClick={() => {
                  setIsModalOpen(false);
-                 navigate('/'); // Navigate to home or another page after closing the modal
+                 navigate('/'); 
                }}
                className="mt-4 bg-blue-500 text-white p-2 rounded hover:bg-blue-700"
              >
