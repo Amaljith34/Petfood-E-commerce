@@ -8,16 +8,63 @@
       "confirmPassword": "1234567890",
       "cart": [
         {
-          "id": "df36",
-          "name": "Dog foddd",
-          "description": "asdfghgcvxb",
-          "price": "3456",
-          "image": "https://m.media-amazon.com/images/I/61ngF3OBp+L._AC_UL320_.jpg",
-          "Qty": "2",
-          "category": "dog"
+          "id": "1",
+          "name": "Royal Canin Dog Food",
+          "category": "Dog",
+          "image": "https://m.media-amazon.com/images/I/51ZkHOvkuuL._SY450_.jpg",
+          "description": "Premium dog food with balanced nutrition for all life stages. Brand: Royal Canin. Flavour: Meat. Age Range: Adult. Form: Dry. Specific Ingredients: Chicken. Net Weight: 3 kg.",
+          "price": "1300",
+          "Qty": 2
         }
       ],
-      "order": []
+      "order": [
+        {
+          "paymentaddress": {
+            "name": "werty",
+            "address": "ertyu",
+            "landmark": "ewrtyu",
+            "pincode": "werty",
+            "phone": "retyu"
+          },
+          "accNumber": "ewrty",
+          "price": 6912,
+          "cart": [
+            {
+              "id": "df36",
+              "name": "Dog foddd",
+              "description": "asdfghgcvxb",
+              "price": "3456",
+              "image": "https://m.media-amazon.com/images/I/61ngF3OBp+L._AC_UL320_.jpg",
+              "Qty": "2",
+              "category": "dog"
+            }
+          ],
+          "securityCode": "wertyu"
+        },
+        {
+          "paymentaddress": {
+            "name": "Amaljith",
+            "address": "kattungal",
+            "landmark": "dh",
+            "pincode": "676319",
+            "phone": "1234567890"
+          },
+          "accNumber": "123456789012222",
+          "price": 7184,
+          "cart": [
+            {
+              "id": "2",
+              "name": "Hills Science Diet Cat Food",
+              "category": "cat",
+              "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto/3153926-center-2",
+              "description": "Veterinarian-recommended cat food with precise nutrition for optimal health. Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
+              "price": 7184,
+              "Qty": 1
+            }
+          ],
+          "securityCode": "123456"
+        }
+      ]
     },
     {
       "id": "c2c2",
@@ -46,66 +93,6 @@
         }
       ],
       "order": []
-    },
-    {
-      "id": "bdb3",
-      "name": "Fasalu",
-      "email": "fasalu@gmail.com",
-      "password": "1234567890",
-      "confirmPassword": "1234567890",
-      "cart": [],
-      "order": []
-    },
-    {
-      "id": "a52b",
-      "name": "Anjali c",
-      "email": "anjali@gmail.com",
-      "password": "1234567890",
-      "confirmPassword": "1234567890",
-      "cart": [],
-      "order": [
-        {
-          "paymentaddress": {
-            "name": "Anjali",
-            "address": "churakkayi",
-            "landmark": "pulliparambu",
-            "pincode": "676319",
-            "phone": "8590166397"
-          },
-          "accNumber": "09876543212345",
-          "price": 14219,
-          "cart": [
-            {
-              "id": "3",
-              "name": "Pedigree Adult Dry Dog Food, ",
-              "category": "Dog",
-              "image": "https://m.media-amazon.com/images/I/41Z6Wo7cJvL._SX300_SY300_QL70_FMwebp_.jpg",
-              "description": "Veterinarian-recommended Dog food with precise nutrition for optimal health. Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
-              "price": 4555,
-              "Qty": 1
-            },
-            {
-              "id": "4",
-              "name": "Whiskas Adult Dry Cat Food",
-              "category": "cat",
-              "image": "https://m.media-amazon.com/images/I/41Zi5kqjxvL._SX300_SY300_QL70_FMwebp_.jpg",
-              "description": "Veterinarian-recommended cat food with precise nutrition for optimal health. Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
-              "price": 3999,
-              "Qty": 2
-            },
-            {
-              "id": "7",
-              "name": "TUNAI Fish Food",
-              "category": "fish",
-              "image": "https://m.media-amazon.com/images/I/71MGQvD1d7L._SY355_.jpg",
-              "description": "Veterinarian-recommended fish food with precise nutrition for optimal health. Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
-              "price": 1666,
-              "Qty": 1
-            }
-          ],
-          "securityCode": "8590166397"
-        }
-      ]
     }
   ],
   "products": [
@@ -125,7 +112,7 @@
       "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto/3153926-center-2",
       "description": "Veterinarian-recommended cat food with precise nutrition for optimal health. Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
       "price": 7184,
-      "Qty": 1
+      "Qty": 4
     },
     {
       "id": "3",

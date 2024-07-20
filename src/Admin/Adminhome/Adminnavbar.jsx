@@ -28,11 +28,9 @@ const  Adminnavbar= () => {
 
   
   
-  const userName = "Admin"; // Replace with actual user name
+  const userName = "Admin";
   const userEmail = "admin123@gmail.com";
-  // {cart.map((item, index) => (
-    
-  // ))}
+  
   
 
   return (
@@ -71,7 +69,7 @@ const  Adminnavbar= () => {
           <div className='hidden md:flex flex-1 justify-center items-center '>
             <ul className='flex gap-8 text-[18px] ml-96'>
               <Link to='/admin'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝐇𝐨𝐦𝐞</li></Link>
-              <Link to='/userlist'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝗨𝘀𝗲𝗿-𝗟𝗶𝘀𝘁</li></Link>
+              <Link to='/userlist'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝗨𝘀𝗲𝗿𝗟𝗶𝘀𝘁</li></Link>
               <Link to='/products'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝗣𝗿𝗼𝗱𝘂𝗰𝘁𝘀</li></Link>
               <Link to='/Login'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'><span > 𝗟𝗼𝗴𝗼𝘂𝘁</span></li></Link>
             </ul>

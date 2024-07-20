@@ -26,7 +26,7 @@ import { ShopContext } from '../../App';
         <>
         
         <div className='bg-cover  bg-center mt-16 max-h-screen flex items-center justify-center' >
-          <div className=' rounded-lg shadow-md p-6 max-w-md w-full border bg-gray-200'>
+          <div className=' rounded-lg shadow-md p-6 max-w-md w-full border '>
     
          
           <Formik

@@ -330,8 +330,8 @@ const Product = () => {
   };
 
   return (
-    <div>
-      <div className='text-black font-bold text-3xl flex justify-center p-4'><h1>Product</h1></div>
+    <div className=''>
+      <div className='text-black font-bold text-3xl flex justify-center p-4 '><h1>Product</h1></div>
       <div className='flex justify-center p-5'>
         <input
           type="text"
@@ -350,7 +350,7 @@ const Product = () => {
         </button>
       </div>
 
-      <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  ">
         {ProductData.map((item) => (
           <div key={item.id} className="bg-white rounded-lg shadow-md overflow-hidden border-4 border-gray-400">
             <img

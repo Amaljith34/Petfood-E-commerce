@@ -9,8 +9,16 @@ const validationSchema = Yup.object({
   name: Yup.string().required('Name is required'),
   address: Yup.string().required('Address is required'),
   landmark: Yup.string().required('Landmark is required'),
-  pincode: Yup.string().required('Pincode is required'),
-  phone: Yup.string().required('Phone number is required'),
+  pincode: Yup.string().required('Pincode is required')
+  .matches(/^[0-9]+$/, "Must be only digits")
+  .min(6, 'Must be exactly 6 digits')
+  .max(6, 'Must be exactly 6 digits')
+  .required('Required'),
+  phone: Yup.string().required('Phone number is required')
+  .matches(/^[0-9]+$/, "Must be only digits")
+  .min(10, 'Must be exactly 10 digits')
+  .max(10, 'Must be exactly 10 digits')
+  .required('Required'),
 });
 
 const Userdetails = () => {

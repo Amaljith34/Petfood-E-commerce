@@ -3,7 +3,7 @@ import React from 'react'
 const Baseproducts = () => {
   return (
     <div className='relative  bg-hero-pattern bg-contain'>
-                <button className='font-bold text-black size-12 text-4xl p-8 sm:mb-16 ml-10'>Products</button>
+                <button className='font-bold text-black size-12 text-4xl p-8 sm:mb-16 ml-10'>Details</button>
                 
                   <div className='grid grid-cols-2  gap-5  ml-10 '>
                     <div className='flex flex-col  '>

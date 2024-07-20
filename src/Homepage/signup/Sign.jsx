@@ -28,8 +28,8 @@
       return(
         <>
        
-        <div className='bg-cover  bg-center  max-h-screen mt-12 flex items-center justify-center' >
-          <div className=' rounded-lg shadow-md p-6 max-w-md w-full border bg-gray-300'>
+        <div className='bg-cover  bg-center  max-h-screen mt-12 flex items-center justify-center overflow-auto' >
+          <div className=' rounded-lg shadow-md p-6 max-w-md w-full border '>
       
          
           <Formik

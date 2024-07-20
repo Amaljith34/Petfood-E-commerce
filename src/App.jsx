@@ -64,9 +64,9 @@ function App() {
     axios
       .get('http://localhost:8000/users')
       .then((res) => {
-        const mapedorder = res.data.filter((item) => item.order.length > 0);
-        // console.log(mapedorder.length);
-        setOrderlist(mapedorder);
+        const mapdorder = res.data.filter((item) => item.order.length > 0);
+        
+        setOrderlist(mapdorder);
       })
       .catch((error) => console.log("error"));
   }, []);

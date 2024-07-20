@@ -55,7 +55,7 @@ const Navbar = () => {
       
       
     </div> 
-    <h2 className='text-3xl font-bold text-green-600  md:ml-0 md:px-10 lg:px-24'>𝓟𝓔𝓣𝓢𝓕𝓞𝓞𝓓</h2>
+    <h2 className='text-3xl font-bold text-green-600  md:ml-0 md:px-10 lg:px-24 lg:ml-36'>𝓟𝓔𝓣𝓢𝓕𝓞𝓞𝓓</h2>
           </div>
           <div className='md:hidden'>
             <Link to='/cartpage'>
@@ -66,7 +66,7 @@ const Navbar = () => {
               </button>
             </Link>
           </div>
-          <div className='hidden md:flex flex-1 justify-center items-center  '>
+          <div className='hidden md:flex flex-1 justify-center items-center lg:ml-96 '>
             <ul className='flex gap-8 text-[18px]'>
               <Link to='/'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝐇𝐨𝐦𝐞</li></Link>
               <Link to='/pets'><li className='hover:text-green-600 transition border-b-2 border-gray-400 hover:border-green-600 cursor-pointer'>𝗠𝘆𝗣𝗲𝘁𝘀</li></Link>
