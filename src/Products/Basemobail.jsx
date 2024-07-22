@@ -35,6 +35,7 @@ const Basemobail = () => {
                       <a href='' className='hover:underline hover:text-green-400'>Black Oil Sunflower Seeds</a>
                       <a href='' className='hover:underline hover:text-green-400'>Peanuts hearts</a>
                       <a href='' className='hover:underline hover:text-green-400'>Cracked Corn</a>
+
                     </div>
                     
                   </div>
