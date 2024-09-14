@@ -8,7 +8,7 @@ function Home() {
     <div>
     <div className="  bg-cover  flex max-md:flex-col   justify-center mt-10 ">
       <div className='flex flex-col md:justify-center lg:-mt-10 lg:ml-36 lg:mb-20'>
-        <h1 className='font-bold text-center text-5xl   justify-center  '>HIGHQUALITY <br></br>
+        <h1 className='font-bold text-center text-5xl   justify-center  '>PetLuxe<br></br>
         <span className='md:text-6xl' >PET FOOD</span>
         </h1>
         </div>
