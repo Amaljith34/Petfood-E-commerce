@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React from 'react'
 
 // const Baseproducts = () => {
@@ -42,6 +43,8 @@
 
 // export default Baseproducts
 
+=======
+>>>>>>> 5c525663bc4128626abddba7013d57d5803f9ac8
 
 import React from 'react';
 import Footer from '../Homepage/Footer';
@@ -82,7 +85,11 @@ const Baseproducts = () => {
      </>
   );
 }         
+<<<<<<< HEAD
 
 export default Baseproducts;
 
+=======
+>>>>>>> 5c525663bc4128626abddba7013d57d5803f9ac8
 
+export default Baseproducts;

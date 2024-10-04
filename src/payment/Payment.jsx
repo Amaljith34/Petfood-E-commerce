@@ -124,7 +124,7 @@ const Payment = () => {
           <div className="bg-white p-8 rounded-lg shadow-lg text-center">
             <FaCheckCircle className="text-green-500 text-6xl mb-4 ml-28" />
             <h2 className="text-2xl font-bold mb-4">Order Successful!</h2>
-            <p>Your order has been placed successfully.</p>
+            <p>Your order has been placed successfully!.</p>
             <button
               onClick={() => {
                 setIsModalOpen(false);
