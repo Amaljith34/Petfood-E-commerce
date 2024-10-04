@@ -102,8 +102,9 @@
 
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import Usermodal from '../Adminhome/modal/Usermodal';
-import Order from '../Adminhome/Order';
+import Ordermodal from '../Orders/Ordermodal';
+import Usermodal from './Usermodal';
+
 
 
 const Userlist = () => {
@@ -215,7 +216,7 @@ const Userlist = () => {
         </tbody>
       </table>
       {selectedUser && (
-        <Order
+        <Ordermodal
           isOpen={isModalOpen} 
           onClose={handleCloseModal} 
           user={selectedUser} 

@@ -1,33 +1,34 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link, BrowserRouter } from 'react-router-dom';
-import Login from './Homepage/login/Login';
-import Sign from './Homepage/signup/Sign';
-import Forgotlogin from './Homepage/login/Forgotlogin';
-import Navbar from './Homepage/navbar/Navbar';
-import Pets from './assets/Animals/Pets';
-import ProductList from './Shop/Shop1/ProductList';
-import Home from './Homepage/Home/Home';
-import Baseproducts from './Products/Baseproducts'
+
 
 
 
 
 
 import { createContext } from 'react';
-import Foodcart from './Shop/Shop1/Foodcart';
-import Cart from './Shop/Shop1/Cart';
-import Basemobail from './Products/Basemobail';
+
 import axios from 'axios';
-import Payment from './payment/Payment';
-import Petselect from './assets/Animals/Petselect';
-import Adminnavbar from './Admin/Adminhome/Adminnavbar';
+import Category from './User/Components/category/category';
+import Cart from './User/Components/Cartpage/Cart';
+import Product from './User/Components/Products/products';
+import Categoryhome from './User/Components/category/categoryhome'
+import Orderpage from './User/Components/order/Orderpage';
+import Footer from './User/Components/footer/Footer';
+import Payment from './User/Components/payment/Payment';
+import Userdetails from './User/Components/payment/Userdetails';
+import Login from './BaseComponents/login/Login';
+import Sign from './BaseComponents/signup/Sign';
+import Forgot from './BaseComponents/login/Forgotlogin';
+import Adminnavbar from './Admin/Adminnavbar/Adminnavbar';
 import Homepage from './Admin/Home/Homepage';
 import Userlist from './Admin/User/Userlist';
-import Product from './Admin/productslist/Product';
-import Userdetails from './payment/Userdetails';
-import Footer from './Homepage/Footer';
-import Orderpage from './Homepage/Orderpage';
+import Products from './Admin/productslist/Product';
+import Navbar from './User/Components/navbar/Navbar';
+import Home from './User/Components/Home/Home'
+
+
 
 
 
@@ -190,32 +191,32 @@ function App() {
         
         <Routes>
           <Route path='/' element={<Navbar/>}>
-          
           <Route path='/' element={<Home />}/>
             
-            <Route path='/pets'element={<Pets/>}/>
-            <Route path='/cartpage'element={<Cart/>}/>
-            <Route path='/shop'element={<ProductList/>}/>
-            <Route path='/list'element={<Foodcart/>}/>
-            <Route path='/Baseproduct'element={<Baseproducts/>}/>
-            <Route path='/Basemobail' element={<Basemobail/>}/>
-            <Route path='/petselect'element={<Petselect/>}/>
-            <Route path='/order'element={<Orderpage/>}/>
-            <Route path='/footer'element={<Footer/>}></Route>
-             
-            </Route>
-           
-           
-           <Route path='/payment'element={<Payment/>}/>
-            <Route path='/userdetails'element={<Userdetails/>}/>
-           <Route path='/login' element={<Login />} />
-            <Route path='/sign' element={<Sign />} />
-            <Route path='forgotlogin' element={<Forgotlogin />} />
+       
+          <Route path='/cart'element={<Cart/>}/>
+          <Route path='/product'element={<Product/>}/>
+          
+          <Route path='/category'element={<Category/>}/>
+          <Route path='/categoryhome' element={<Categoryhome/>}/>
+         
+          <Route path='/orders'element={<Orderpage/>}/>
+          <Route path='/footer'element={<Footer/>}></Route>
+          </Route>
 
-            <Route path='/'element={<Adminnavbar/>}>
-            <Route path='/admin'element={<Homepage/>}/>
-             <Route path='/userlist'element={<Userlist/>}/>
-             <Route path='/products'element={<Product/>}/>
+          <Route path='/payment'element={<Payment/>}/>
+          <Route path='/userdetails'element={<Userdetails/>}/>
+
+          <Route path='/login' element={<Login />} />
+          <Route path='/sign' element={<Sign />} />
+          <Route path='forgot' element={<Forgot />} />
+
+
+
+          <Route path='/'element={<Adminnavbar/>}>
+          <Route path='/admin'element={<  Homepage/>}/>
+          <Route path='/userlist'element={<Userlist/>}/>
+          <Route path='/products'element={<Products/>}/>
            
             </Route>
 
