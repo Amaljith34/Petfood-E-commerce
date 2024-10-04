@@ -5,7 +5,7 @@ import React from 'react';
 import Footer from '../footer/Footer';
 
 
-const Baseproducts = () => {
+const About = () => {
   return (
     <>
     <div className="container mx-auto p-4 sm:p-8 font-sans">
@@ -43,6 +43,6 @@ const Baseproducts = () => {
 }         
 
 
-export default Baseproducts;
+export default About;
 
 

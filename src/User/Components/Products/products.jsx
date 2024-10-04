@@ -1,6 +1,7 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext,useEffect, useState } from 'react';
 import { ShopContext } from '../../../App';
 import Footer from '../footer/Footer';
+import axios from 'axios';
 
 
 

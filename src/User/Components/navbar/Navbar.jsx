@@ -338,7 +338,7 @@ const Navbar = () => {
     localStorage.clear();
     setLogged(false);
     setDropdownVisible(false);
-    navigate("/Login");
+    navigate("/login");
   };
 
 
@@ -353,7 +353,7 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  
+
   const handleClick = () => setClick(!click);
 
   return (
@@ -372,7 +372,7 @@ const Navbar = () => {
                     <div className="px-4 py-2 text-sm text-gray-700">
                       <p>{user.name}</p>
                       <p>{userEmail}</p>
-          <Link to='/order'>
+          <Link to='/orders'>
           <button 
           className='w-full px-4 py-2 text-sm text-left  bg-green-500 rounded-lg mt-4 font-bold'
           >
@@ -410,7 +410,7 @@ const Navbar = () => {
           
 
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/cartpage">
+            <Link to="/cart">
               <button className="relative flex items-center justify-center text-black p-2 rounded-full">
                 <FaShoppingCart className="text-2xl" />
                 <span className={`absolute -top-1 -right-1 bg-red-600  text-xs rounded-full w-4 h-4 flex items-center justify-center ${size > 0 ? 'inline' : 'hidden'}`}>
@@ -430,7 +430,7 @@ const Navbar = () => {
                     <div className="px-4 py-2 text-sm text-gray-700">
                       <p>{user.name}</p>
                       <p>{userEmail}</p>
-                      <Link to='/order'>
+                      <Link to='/orders'>
           <button 
           className='w-full px-4 py-2 text-sm text-left text-white bg-red-500 rounded-lg mt-4'
           >
@@ -473,18 +473,19 @@ const Navbar = () => {
                </Link>
              </li>
              <li>
-               <Link to="/shop" className="block py-3 px-3 hover:bg-green-600 rounded-xl transition duration-300 ">
+               <Link to="/product" className="block py-3 px-3 hover:bg-green-600 rounded-xl transition duration-300 ">
                  Shop
                </Link>
              </li>
+             
              <li>
-               <Link to="/Baseproduct" className="block py-3 px-3 hover:bg-green-600 rounded-xl transition duration-300 ">
-                 About Us
+               <Link to="/Categoryhome" className="block py-3 px-3 hover:bg-green-600 rounded-xl transition duration-300 ">
+                 Category
                </Link>
              </li>
              <li>
-               <Link to="/pets" className="block py-3 px-3 hover:bg-green-600 rounded-xl transition duration-300 ">
-                 Category
+               <Link to="/about" className="block py-3 px-3 hover:bg-green-600 rounded-xl transition duration-300 ">
+                 About Us
                </Link>
              </li>
            </ul>
@@ -495,9 +496,9 @@ const Navbar = () => {
         <div className=" mx-auto px-4 py-4 " >
           <ul className="flex flex-col space-y-2 bg-green-800">
             <Link to="/"><li className=" hover:bg-green-800 py-2 px-4 rounded font-bold" onClick={handleClick}>Home</li></Link>
-            <Link to="/shop"><li className=" hover:bg-green-800 py-2 px-4 rounded font-bold" onClick={handleClick}>Shop</li></Link>
-            <Link to="/Baseproduct"><li className=" hover:bg-green-800 py-2 px-4 rounded font-bold" onClick={handleClick}>About Us</li></Link>
-            <Link to="/pets"><li className=" hover:bg-green-800 py-2 px-4 rounded font-bold" onClick={handleClick}>Category</li></Link>
+            <Link to="/product"><li className=" hover:bg-green-800 py-2 px-4 rounded font-bold" onClick={handleClick}>Shop</li></Link>
+            <Link to="/categoryhome"><li className=" hover:bg-green-800 py-2 px-4 rounded font-bold" onClick={handleClick}>Category</li></Link>
+            <Link to="/about"><li className=" hover:bg-green-800 py-2 px-4 rounded font-bold" onClick={handleClick}>About Us</li></Link>
 
           </ul>
         </div>

@@ -32,7 +32,7 @@ const Categoryhome = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pb-56 md:pb-0 ">
         {pets.map((dog, index) => (
           <div key={index} className="border border-gray-400 p-6 rounded-lg shadow-lg">
-            <Link to='/Petselect'>
+            <Link to='/category'>
             <img src={dog.image} alt={dog.name} className="w-full  object-cover rounded-t-lg mb-4"/>
             </Link>
             <h2 className="text-2xl font-bold mb-2">{dog.name}</h2>

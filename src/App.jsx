@@ -27,6 +27,7 @@ import Userlist from './Admin/User/Userlist';
 import Products from './Admin/productslist/Product';
 import Navbar from './User/Components/navbar/Navbar';
 import Home from './User/Components/Home/Home'
+import About from './User/Components/About/about';
 
 
 
@@ -201,7 +202,9 @@ function App() {
           <Route path='/categoryhome' element={<Categoryhome/>}/>
          
           <Route path='/orders'element={<Orderpage/>}/>
+          <Route path='/about'element={<About/>}/>
           <Route path='/footer'element={<Footer/>}></Route>
+          
           </Route>
 
           <Route path='/payment'element={<Payment/>}/>

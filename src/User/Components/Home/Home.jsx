@@ -15,7 +15,7 @@ const Home = () => {
               dogs and cats to birds and fish, we have everything your pets need
               to stay happy and healthy.
             </p>
-            <Link to="/Shop">
+            <Link to="/product">
               <button className="bg-red-500 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-red-600 transition">
                 Shop Now
               </button>
