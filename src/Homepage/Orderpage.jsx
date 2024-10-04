@@ -309,12 +309,13 @@ const Orderpage = () => {
                 
                 <p><strong>Phone:</strong>₹{(item.paymentaddress.phone)}</p>
                 {item.cart.map((items)=>(
-                    <div>
+                  <div>
                 <p><strong>Product:</strong>₹{(items.name)}</p>
                 <p><strong>product id:</strong>₹{(items.id)}</p>
                 <p><strong>Quantity:</strong>₹{(items.Qty)}</p>
                 <p><strong>product price:</strong>₹{(items.price)}</p>
                 </div>
+                
 
                 ))}
                 

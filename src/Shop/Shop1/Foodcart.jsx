@@ -24,7 +24,7 @@ const Foodcart = ({ data }) => {
       />
       </div>
 <h2 className="text-3xl font-bold mb-8">Popular Categories</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-48 sm:mb-0">
+      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-48 sm:mb-0">
         {filteredData.map((item) => (
           <div key={item.id} className="bg-white rounded-lg shadow-md overflow-hidden border-4 border-gray-400">
             <img
@@ -34,12 +34,12 @@ const Foodcart = ({ data }) => {
             />
             <div className="p-4">
               <h3 className="text-xl font-bold mb-2">{item.name}</h3>
-              <p className="text-gray-700">{item.description}</p>
+              <h5 className="text-gray-700">Category:{item.category}</h5>
               <p className="text-gray-900 text-lg font-bold">₹{item.price}</p>
             </div>
-            <div className="px-6 pt-4 pb-2">
+            <div className="px-6 pt-4 pb-2 ">
               <button
-                className="bg-green-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md"
+                className="bg-green-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md bottom-0"
                 onClick={() => addtocart(item)}
               >
                 Add to Cart
