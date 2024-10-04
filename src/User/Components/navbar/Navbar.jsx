@@ -341,7 +341,7 @@ const Navbar = () => {
     navigate("/Login");
   };
 
-  // Close dropdown when clicking outside
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -353,7 +353,7 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Toggling the mobile menu
+  
   const handleClick = () => setClick(!click);
 
   return (
