@@ -11,7 +11,7 @@ const Home = () => {
               <span className="text-edu-au">W</span>elcome to Pet Food Store
             </h1>
             <p className="text-xl mb-8 text-black">
-              Explore our wide range of premium pet foods and accessories. From
+              Explore our wide range of premium pet foods and accessories.From
               dogs and cats to birds and fish, we have everything your pets need
               to stay happy and healthy.
             </p>
