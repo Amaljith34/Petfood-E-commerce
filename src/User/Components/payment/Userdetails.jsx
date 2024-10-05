@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,Link} from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -115,6 +115,7 @@ const Userdetails = () => {
               </div>
 
               <div className='flex justify-between'>
+                <Link to='/cart' >
                 <button
                   type="button"
                   className='w-28 bg-red-600 text-white p-2.5 rounded mt-4 hover:bg-slate-900 font-bold'
@@ -122,6 +123,7 @@ const Userdetails = () => {
                 >
                   Cancel
                 </button>
+                </Link>
                 <button
                   className="w-52 bg-green-700 text-white p-2.5 rounded mt-4 hover:bg-slate-900 font-bold"
                   type="submit"

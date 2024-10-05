@@ -127,7 +127,62 @@
       "email": "admin123@gmail.com",
       "password": "admin123",
       "confirmPassword": "admin123",
-      "cart": [],
+      "cart": [
+        {
+          "id": "2",
+          "name": "Hills Science Diet Cat Food",
+          "category": "cat",
+          "image": "https://assets.petco.com/petco/image/upload/f_auto,q_auto/3153926-center-2",
+          "description": "Veterinarian-recommended cat food . Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
+          "price": "7199",
+          "Qty": 1
+        },
+        {
+          "id": "1",
+          "name": "Royal Canin Dog Food",
+          "category": "Dog",
+          "image": "https://m.media-amazon.com/images/I/51ZkHOvkuuL._SY450_.jpg",
+          "description": "Premium dog food with balanced nutrition for all life stages. Brand: Royal Canin. Flavour: Meat. Age Range: Adult. Form: Dry. Specific Ingredients: Chicken. Net Weight: 3 kg.",
+          "price": "1300",
+          "Qty": 7
+        },
+        {
+          "id": "7",
+          "name": "TUNAI Fish Food",
+          "category": "fish",
+          "image": "https://m.media-amazon.com/images/I/71MGQvD1d7L._SY355_.jpg",
+          "description": "Veterinarian-recommended fish food . Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
+          "price": 1666,
+          "Qty": 1
+        },
+        {
+          "id": "12",
+          "name": "Jainsons Pet Products",
+          "category": "fish",
+          "image": "https://m.media-amazon.com/images/I/61ngF3OBp+L._AC_UL320_.jpg",
+          "description": "Veterinarian-recommended fish food with precise nutrition for optimal health. Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
+          "price": "999",
+          "Qty": 2
+        },
+        {
+          "id": "11",
+          "name": "Boltz Bird Food for Cockatiel & Lovebirds Mix Seeds",
+          "category": "bird",
+          "image": "https://m.media-amazon.com/images/I/4177Z9u3j9L._SX300_SY300_QL70_FMwebp_.jpg",
+          "description": "Veterinarian-recommended bird food . Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
+          "price": 3500,
+          "Qty": 1
+        },
+        {
+          "id": "9",
+          "name": "SF+ True Color Fish Food for Cichlids",
+          "category": "fish",
+          "image": "https://m.media-amazon.com/images/I/51Hf5m-3P0L._SX300_SY300_QL70_FMwebp_.jpg",
+          "description": "Veterinarian-recommended fish food . Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
+          "price": 2500,
+          "Qty": 2
+        }
+      ],
       "order": [
         {
           "paymentaddress": {
@@ -251,6 +306,24 @@
           "image": "https://m.media-amazon.com/images/I/511btyh4t+L._SY300_SX300_.jpg",
           "description": "Veterinarian-recommended dog food . Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
           "price": 4499,
+          "Qty": 2
+        },
+        {
+          "id": "4",
+          "name": "Whiskas Adult Dry Cat Food",
+          "category": "cat",
+          "image": "https://m.media-amazon.com/images/I/41Zi5kqjxvL._SX300_SY300_QL70_FMwebp_.jpg",
+          "description": "Veterinarian-recommended cat food . Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
+          "price": "4000",
+          "Qty": 2
+        },
+        {
+          "id": "3",
+          "name": "Pedigree Adult Dry Dog Food, ",
+          "category": "Dog",
+          "image": "https://m.media-amazon.com/images/I/41Z6Wo7cJvL._SX300_SY300_QL70_FMwebp_.jpg",
+          "description": "Veterinarian-recommended Dog food . Brand: Hills Pet Nutrition. Flavour: Chicken. Age Range: Adult. Item Form: Dry. Net Quantity: 1.81 kg.",
+          "price": "5000",
           "Qty": 2
         }
       ],

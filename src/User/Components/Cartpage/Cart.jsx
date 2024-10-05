@@ -34,7 +34,7 @@ function Cart() {
             className="flex justify-center flex-wrap mt-24 ml-4 mb-32 border-black"
           >
             <div className="w-full sm:w-1/2">
-              <div className="w-full sm:bg-slate-100 shadow-md rounded-lg overflow-hidden h-full flex flex-col justify-between">
+              <div className="w-full sm:bg-slate-300 shadow-md rounded-lg overflow-hidden h-full flex flex-col justify-between">
                 <img
                   className="w-full md:w-full h-40 object-contain mt-2"
                   src={item.image}

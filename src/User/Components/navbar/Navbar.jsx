@@ -358,13 +358,13 @@ const Navbar = () => {
 
   return (
     <div className="font-sans">
-      <nav className="bg-gray-300 shadow-md">
+      <nav className=" shadow-md">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           
           <div className='block md:hidden '>
           {isLogged ? (
               <div className="relative">
-                <button className="bg-gray-400 text-white p-2 rounded-full hover:bg-green-600 transition-colors" onClick={handleLogout}>
+                <button className="bg-gray-400 text-white p-2 rounded-full hover:text-red-600 transition-colors" onClick={handleLogout}>
                   <IoIosContact className="text-2xl" />
                 </button>
                 {dropdownVisible && (
@@ -393,7 +393,7 @@ const Navbar = () => {
               </div>
             ) : (
               <Link to="/Sign">
-                <button className="bg-gray-400  p-2 rounded-full hover:bg-green-600 transition-colors">
+                <button className="bg-gray-400  p-2 rounded-full hover:text-red-600 transition-colors">
                   Sign in
                 </button>
               </Link>
@@ -451,7 +451,7 @@ const Navbar = () => {
               </div>
             ) : (
               <Link to="/Sign">
-                <button className="bg-gray-400 text-white p-2 rounded-full hover:bg-green-600 transition-colors">
+                <button className="bg-gray-400 text-white p-2 rounded-full hover:text-red-600 transition-colors">
                   Sign in
                 </button>
               </Link>
@@ -464,27 +464,27 @@ const Navbar = () => {
         </div>
       </nav>
       
-      <nav className="bg-green-500 font-bold">
+      <nav className="bg-gray-300 font-bold">
          <div className="container mx-auto px-4">
            <ul className="hidden md:flex justify-center space-x-8">
              <li>
-               <Link to="/" className="block py-3 px-3 hover:bg-green-600 rounded-xl transition duration-300">
+               <Link to="/" className="block py-3 px-3 hover:text-red-600 rounded-xl transition duration-300">
                  Home
                </Link>
              </li>
              <li>
-               <Link to="/product" className="block py-3 px-3 hover:bg-green-600 rounded-xl transition duration-300 ">
+               <Link to="/product" className="block py-3 px-3 hover:text-red-600 rounded-xl transition duration-300 ">
                  Shop
                </Link>
              </li>
              
              <li>
-               <Link to="/Categoryhome" className="block py-3 px-3 hover:bg-green-600 rounded-xl transition duration-300 ">
+               <Link to="/Categoryhome" className="block py-3 px-3 hover:text-red-600 rounded-xl transition duration-300 ">
                  Category
                </Link>
              </li>
              <li>
-               <Link to="/about" className="block py-3 px-3 hover:bg-green-600 rounded-xl transition duration-300 ">
+               <Link to="/about" className="block py-3 px-3 hover:text-red-600 rounded-xl transition duration-300 ">
                  About Us
                </Link>
              </li>
@@ -492,17 +492,41 @@ const Navbar = () => {
          </div>
        </nav>
 
-      <div className={`md:hidden fixed z-50 backdrop-blur-md bg-opacity-30 transition left-0 right-0 bg-green-800 ${click ? 'block' : 'hidden'}`}>
+      <div className={`absolute top-16 right-0  w-2/4 bg-white md:hidden z-50 ${click ? 'block' : 'hidden'}`}>
         <div className=" mx-auto px-4 py-4 " >
-          <ul className="flex flex-col space-y-2 bg-green-800">
-            <Link to="/"><li className=" hover:bg-green-800 py-2 px-4 rounded font-bold" onClick={handleClick}>Home</li></Link>
-            <Link to="/product"><li className=" hover:bg-green-800 py-2 px-4 rounded font-bold" onClick={handleClick}>Shop</li></Link>
-            <Link to="/categoryhome"><li className=" hover:bg-green-800 py-2 px-4 rounded font-bold" onClick={handleClick}>Category</li></Link>
-            <Link to="/about"><li className=" hover:bg-green-800 py-2 px-4 rounded font-bold" onClick={handleClick}>About Us</li></Link>
+          <ul className="space-y-4 mt-4 p-4">
+            <Link to="/"><li className=" text-black hover:text-orange-600 font-bold p-2" onClick={handleClick}>Home</li></Link>
+            <Link to="/product"><li className=" text-black hover:text-orange-600 font-bold p-2" onClick={handleClick}>Shop</li></Link>
+            <Link to="/categoryhome"><li className=" text-black hover:text-orange-600 font-bold p-2" onClick={handleClick}>Category</li></Link>
+            <Link to="/about"><li className=" text-black hover:text-orange-600 font-bold p-2" onClick={handleClick}>About Us</li></Link>
 
           </ul>
         </div>
       </div>
+
+{/* <div className="absolute top-16 right-0  w-1/3 bg-white md:hidden z-50">
+            <ul className="space-y-4 mt-4 p-4">
+              <li className="text-black hover:text-orange-600" onClick={handleItemClick}>
+                <Link to="/">Home</Link>
+              </li>
+              <li className="text-black hover:text-orange-600" onClick={handleItemClick}>
+                <Link to="shop">Shop</Link>
+              </li>
+              <li className="text-black hover:text-orange-600" onClick={handleItemClick}>
+                <Link to="shop">About Us</Link>
+              </li>
+              {/* <li
+                className="text-black hover:text-orange-600"
+                onClick={() => {
+                  handleItemClick();
+                  setIsLogged(false);
+                  localStorage.clear();
+                }}
+              >
+                <Link to="login">{isLogged ? 'Logout' : 'Login'}</Link>
+              </li> */}
+            {/* </ul>
+          </div> */} 
 
       <main>
         <Outlet />
