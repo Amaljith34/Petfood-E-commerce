@@ -28,6 +28,7 @@ import Adminnavbar from "./Admin/Adminnavbar/Adminnavbar";
 import Homepage from "./Admin/Home/Homepage";
 import Userlist from "./Admin/User/Userlist";
 import Products from "./Admin/productslist/Product";
+import Wishlist from "./User/Components/wishlist/Wishlist";
 
 export const ShopContext = createContext();
 function App() {
@@ -41,6 +42,7 @@ function App() {
   const [orderlist, setOrderlist] = useState([]);
   const [productslist, setProductslist] = useState([]);
   let id = localStorage.getItem("id");
+  const [wishlist, setWishlist] = useState([]);
 
   useEffect(() => {
     if (id) {
@@ -163,6 +165,19 @@ function App() {
         .catch((error) => console.log("error"));
     }
   };
+  const addToWishlist = (item) => {
+    if (!wishlist.some((wishlistItem) => wishlistItem.id === item.id)) {
+      setWishlist((prevWishlist) => [...prevWishlist, item]);
+      alert('Added to Wishlist');
+    } else {
+      alert('Item already in Wishlist');
+    }
+  };
+
+  const removeFromWishlist = (item) => {
+    setWishlist((prevWishlist) => prevWishlist.filter((wishlistItem) => wishlistItem.id !== item.id));
+    alert('Removed from Wishlist');
+  };
 
   let size = cart.length;
   return (
@@ -187,6 +202,8 @@ function App() {
             user,
             productslist,
             orderlist,
+            addToWishlist,
+            removeFromWishlist
           }}
         >
           <Routes>
@@ -202,6 +219,7 @@ function App() {
               <Route path="/orders" element={<Orderpage />} />
               <Route path="/about" element={<About />} />
               <Route path="/footer" element={<Footer />}></Route>
+              <Route path="/wishlist" element={<Wishlist/>}/>
             </Route>
 
             <Route path="/payment" element={<Payment />} />
