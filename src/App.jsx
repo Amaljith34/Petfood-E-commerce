@@ -233,8 +233,8 @@ function App() {
               <Route path="/admin" element={<Homepage />} />
               <Route path="/userlist" element={<Userlist />} />
               <Route path="/products" element={<Products />} />
-              {/* <Route path='/total' element={<T}/> */}
-              {/* <Route path='/orderlist' element={<}/> */}
+              <Route path='/total' element={<T}/> 
+               <Route path='/orderlist' element={<}/>
             </Route>
           </Routes>
         </ShopContext.Provider>
